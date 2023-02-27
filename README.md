@@ -22,3 +22,5 @@ Area of improvement in the code:
 11. AD user creation and granting permission to VMSS is not considered
 12. Terraform statefile could have been stored in storage account
 
+
+I can discuss all other points during discussion.
