@@ -1,0 +1,25 @@
+---
+- hosts: all
+  become: yes
+  tasks:
+    - name: Install apache2
+      apt:        
+        name: apache2
+        update_cache: yes
+        state: latest
+
+       
+    - name: Enable mod_rewrite
+      ansible.builtin.replace:
+        path: /etc/apache2/ports.conf
+        regexp: '(\s+)Listen 80(\s+.*)?$'
+        replace: '\1Listen 8080\2'      
+      notify: Restart apache2
+
+
+
+  handlers:
+    - name: Restart apache2
+      service:
+       name: apache2
+       state: restarted
