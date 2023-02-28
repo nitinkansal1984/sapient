@@ -83,6 +83,7 @@ resource "null_resource" "installansible" {
   }
   provisioner "local-exec" {
       command = <<EOT
+        uname -a;
         echo '${tls_private_key.sap_ssh.private_key_openssh}' > /tmp/mykey.pem;
         chmod 400 /tmp/mykey.pem;
         /bin/sudo apt-get update -y; /bin/sudo apt-get install python3;
