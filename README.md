@@ -24,3 +24,5 @@ Area of improvement in the code:
 
 
 I can discuss all other points during discussion.
+
+Created custom modules for few resources to showcase
