@@ -85,9 +85,9 @@ resource "null_resource" "installansible" {
       command = <<EOT
         echo '${tls_private_key.sap_ssh.private_key_openssh}' > /tmp/mykey.pem;
         chmod 400 /tmp/mykey.pem;
-        apt-get update -y; apt-get install python3;
-        apt-get install ansible -y;
-        ANSIBLE_HOST_KEY_CHECKING=False ansible-playbook --user "demouser" -i '${module.network.publicip},' --private-key /tmp/mykey.pem  -e ansible_ssh_port=${each.value} apache.yml;
+        sudo apt-get update -y; sudo apt-get install python3;
+        sudo apt-get install ansible -y;
+        ANSIBLE_HOST_KEY_CHECKING=False sudo ansible-playbook --user "demouser" -i '${module.network.publicip},' --private-key /tmp/mykey.pem  -e ansible_ssh_port=${each.value} apache.yml;
 #        rm -rf /tmp/mykey.pem; 
     EOT
   }
