@@ -18,7 +18,7 @@ resource "azurerm_public_ip" "sappubip" {
  location                     = var.location
  resource_group_name          = var.rgname
  allocation_method            = "Static"
- domain_name_label            = "mypublicipsapient"
+ domain_name_label            = "mypublicipsap090323"
 }
 
 output "public_ip_address_id" {
