@@ -16,11 +16,9 @@ Area of improvement in the code:
 5. The VMSS could have dynamic rollout policy enabled instead of just manual for scaling out and scaling in.
 6. The code could have been placed in github and called it using terraform enterprise cloud and store all credentials in terraform cloud
 7. Could make use of azure vault to store all credentials
-8. Could have used devops pipelines to provision everything in one click
 9. All best practices are not met
 10. Workspaces can be used for deploying in to multiple environment with condition
 11. AD user creation and granting permission to VMSS is not considered
-12. Terraform statefile could have been stored in storage account
 
 
 I can discuss all other points during discussion.
